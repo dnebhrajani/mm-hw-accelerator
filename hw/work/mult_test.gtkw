@@ -1,0 +1,202 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Thu Jun 25 14:05:42 2026
+[*]
+[dumpfile] "/auto/common/durga/work/proj/hwacc/hw/work/dump.vcd"
+[dumpfile_mtime] "Thu Jun 25 10:28:26 2026"
+[dumpfile_size] 275188
+[savefile] "/auto/common/durga/work/proj/hwacc/hw/work/mult_test.gtkw"
+[timestart] 0
+[size] 1852 977
+[pos] -1 -1
+*-6.933679 5642 12565 12705 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] mm_simtop.
+[treeopen] mm_simtop.mm_core.
+[treeopen] mm_simtop.mm_core.mm_xram.
+[sst_width] 251
+[signals_width] 304
+[sst_expanded] 1
+[sst_vpaned_height] 599
+@28
+mm_simtop.mm_core.mm_reg.rst
+mm_simtop.mm_core.mm_reg.clk
+@200
+-
+-AXI Slave signals
+@22
+mm_simtop.mm_core.mm_axi_slave.sys_addr[18:0]
+@28
+mm_simtop.mm_core.mm_axi_slave.sys_we
+@22
+mm_simtop.mm_core.mm_axi_slave.sys_wdata[31:0]
+@28
+mm_simtop.mm_core.mm_axi_slave.sys_re
+@22
+mm_simtop.mm_core.mm_axi_slave.sys_rdata[31:0]
+@28
+mm_simtop.mm_core.mm_axi_slave.sys_ack
+@22
+mm_simtop.mm_core.mm_axi_slave.reg_addr[7:0]
+@28
+mm_simtop.mm_core.mm_axi_slave.reg_ce
+mm_simtop.mm_core.mm_axi_slave.reg_we
+@23
+mm_simtop.mm_core.mm_axi_slave.reg_wdata[31:0]
+@22
+mm_simtop.mm_core.mm_axi_slave.reg_rdata[31:0]
+@200
+-
+-REG block signals
+@22
+mm_simtop.mm_core.mm_reg.addr[7:0]
+@28
+mm_simtop.mm_core.mm_reg.ce
+mm_simtop.mm_core.mm_reg.we
+@22
+mm_simtop.mm_core.mm_reg.wdata[31:0]
+mm_simtop.mm_core.mm_reg.rdata[31:0]
+mm_simtop.mm_core.mm_reg.n[8:0]
+@28
+mm_simtop.mm_core.mm_reg.mm_done
+@200
+-
+-XRAM signals
+@22
+mm_simtop.mm_core.mm_xram.addr_a[7:0]
+@28
+mm_simtop.mm_core.mm_xram.ce_a
+mm_simtop.mm_core.mm_xram.we_a
+@22
+mm_simtop.mm_core.mm_xram.wdata_a[15:0]
+mm_simtop.mm_core.mm_xram.rdata_a[15:0]
+@28
+mm_simtop.mm_core.mm_xram.addr_b[2:0]
+@22
+mm_simtop.mm_core.mm_xram.rdata_b[511:0]
+@200
+-
+-MRAM signals
+@22
+mm_simtop.mm_core.mm_mram.addr_a[15:0]
+@28
+mm_simtop.mm_core.mm_mram.ce_a
+mm_simtop.mm_core.mm_mram.we_a
+@22
+mm_simtop.mm_core.mm_mram.wdata_a[15:0]
+mm_simtop.mm_core.mm_mram.rdata_a[15:0]
+@28
+mm_simtop.mm_core.mm_mram.ce_b
+@c00024
+mm_simtop.mm_core.mm_mram.addr_b[10:0]
+@28
+(0)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(1)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(2)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(3)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(4)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(5)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(6)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(7)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(8)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(9)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+(10)mm_simtop.mm_core.mm_mram.addr_b[10:0]
+@1401200
+-group_end
+@22
+mm_simtop.mm_core.mm_mram.rdata_b[511:0]
+@200
+-
+-YRAM signals
+@22
+mm_simtop.mm_core.mm_yram.addr_a[8:0]
+@28
+mm_simtop.mm_core.mm_yram.ce_a
+mm_simtop.mm_core.mm_yram.we_a
+@22
+mm_simtop.mm_core.mm_yram.wdata_a[31:0]
+mm_simtop.mm_core.mm_yram.rdata_a[31:0]
+@24
+mm_simtop.mm_core.mm_yram.addr_b[7:0]
+@28
+mm_simtop.mm_core.mm_yram.ce_b
+mm_simtop.mm_core.mm_yram.we_b
+@420
+mm_simtop.mm_core.mm_yram.wdata_b[39:0]
+@200
+-
+-ACC signals
+@22
+mm_simtop.mm_core.mm_mac.col_rdata[511:0]
+mm_simtop.mm_core.mm_mac.row_rdata[511:0]
+@28
+mm_simtop.mm_core.mm_mac.acc_en
+mm_simtop.mm_core.mm_mac.acc_clr
+@420
+mm_simtop.mm_core.mm_mac.acc_out[39:0]
+@28
+mm_simtop.mm_core.mm_mac.acc_valid
+mm_simtop.mm_core.mm_mac.en_s5
+@c00022
+mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+@28
+(0)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(1)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(2)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(3)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(4)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(5)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(6)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(7)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(8)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(9)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(10)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(11)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(12)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(13)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(14)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(15)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(16)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(17)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(18)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(19)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(20)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(21)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(22)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(23)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(24)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(25)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(26)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(27)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(28)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(29)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(30)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+(31)mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+@1401200
+-group_end
+@28
+mm_simtop.mm_core.mm_mac.clr_s5
+@200
+-
+-CTRL signals
+@28
+mm_simtop.mm_core.mm_ctrl.mm_start
+mm_simtop.mm_core.mm_ctrl.mm_done
+@22
+mm_simtop.mm_core.mm_ctrl.n_pages[3:0]
+@100000028
+mm_simtop.mm_core.mm_ctrl.mm_state[2:0]
+@24
+mm_simtop.mm_core.mm_ctrl.col_addr[2:0]
+@28
+mm_simtop.mm_core.mm_ctrl.col_ce
+@24
+mm_simtop.mm_core.mm_ctrl.row_addr[10:0]
+@28
+mm_simtop.mm_core.mm_ctrl.row_ce
+mm_simtop.mm_core.mm_ctrl.is_first
+@24
+mm_simtop.mm_core.mm_ctrl.ccnt[31:0]
+@28
+mm_simtop.mm_core.mm_ctrl.ccnt_clr
+[pattern_trace] 1
+[pattern_trace] 0

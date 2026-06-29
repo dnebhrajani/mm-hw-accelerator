@@ -1,0 +1,8 @@
+
+TO-DO list + bug list for module mmult
+
+1. measure time at all major blocks:
+--------------------------------------------------------------------------------
+loading n, loading x, loading m ka time and running (computation) time. generate
+random 256 by 256 matrix and vector for mult in measuring time using the
+clockgettime function.

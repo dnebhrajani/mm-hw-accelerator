@@ -1,0 +1,5 @@
+\rm -rf red_pitaya_top.bif  red_pitaya_top.bit	red_pitaya_top.bit.bin
+cp ../../syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/red_pitaya_top.bit .
+echo -n "all:{ red_pitaya_top.bit }" >  red_pitaya_top.bif
+bootgen -image red_pitaya_top.bif -arch zynq -process_bitstream bin -o red_pitaya_top.bit.bin -w
+
