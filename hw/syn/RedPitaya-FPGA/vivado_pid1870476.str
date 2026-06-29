@@ -1,0 +1,980 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 1870476
+License: Customer
+
+Current time: 	Mon Jun 29 17:49:32 IST 2026
+Time zone: 	India Standard Time (Asia/Kolkata)
+
+OS: Linux
+OS Version: 5.15.0-116-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	durga
+User home directory: /home/durga
+User working directory: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2020.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/durga/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/durga/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/durga/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/vivado.log
+Vivado journal file location: 	/auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1870476-ganga
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2020.1
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	205 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,410 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'red_pitaya_vivado_project_Z10.tcl' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source red_pitaya_vivado_project_Z10.tcl 
+// Tcl Message: # set prj_name [lindex $argv 0] # set prj_defs [lindex $argv 1] # puts "Project name: $prj_name" 
+// Tcl Message: Project name: v0.94 
+// Tcl Message: # puts "Defines: $prj_defs" 
+// Tcl Message: Defines:  
+// Tcl Message: # cd prj/$prj_name # set path_brd ../../brd # set path_rtl rtl # set path_ip      ip # set path_ip_top  ../../ip # set path_bd  project/redpitaya.srcs/sources_1/bd/system/hdl # set path_sdc ../../sdc # set path_sdc_prj sdc # set_param board.repoPaths [list $path_brd] # set_param iconstr.diffPairPulltype {opposite} # set part xc7z010clg400-1 # create_project -part $part -force redpitaya ./project 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 120 MB (+123639kb) [00:00:15]
+// [Engine Memory]: 1,425 MB (+1342536kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  4842 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,436 MB. GUI used memory: 57 MB. Current time: 6/29/26, 5:49:38 PM IST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:14 . Memory (MB): peak = 7031.020 ; gain = 39.109 ; free physical = 2634 ; free virtual = 10180 
+// Tcl Message: INFO: [BD::TCL 103-2003] Currently there is no design <system> in project, so creating one... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  2979 ms.
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: Wrote  : </auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd>  
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: INFO: [BD::TCL 103-2004] Making design <system> as current_bd_design. 
+// Tcl Message: ## common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"." 
+// Tcl Message: INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "system". 
+// Tcl Message: INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  xilinx.com:ip:axi_protocol_converter:2.1 xilinx.com:ip:proc_sys_reset:5.0 xilinx.com:ip:processing_system7:5.5 xilinx.com:ip:xadc_wiz:3.3 xilinx.com:ip:xlconstant:1.1  . 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: create_bd_cell: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 7062.730 ; gain = 0.000 ; free physical = 2314 ; free virtual = 9860 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd>  Wrote  : </auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// Tcl Message: # generate_target all [get_files    system.bd] 
+// Tcl Message: Wrote  : </auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd>  Wrote  : </auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.v VHDL Output written to : /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/sim/system.v VHDL Output written to : /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_protocol_converter_0 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_register_slice_0 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant . 
+// Tcl Message: Exporting to file /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system.hwh Generated Block Design Tcl file /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl Generated Hardware Definition File /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 7062.730 ; gain = 0.000 ; free physical = 2245 ; free virtual = 9824 
+// Tcl Message: # if {$prj_name != "pyrpl"} { # add_files                         ../../$path_rtl # add_files -fileset constrs_1      $path_sdc/red_pitaya.xdc # } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: # add_files                         $path_rtl # add_files                         $path_bd # set ip_files [glob -nocomplain $path_ip/*.xci] # if {$ip_files != ""} { # add_files                         $ip_files # } # if {[file isdirectory $path_ip_top/asg_dat_fifo]} { # add_files $path_ip_top/asg_dat_fifo/asg_dat_fifo.xci # } 
+// Tcl Message: # if {[file isdirectory $path_ip_top/sync_fifo]} { # add_files $path_ip_top/sync_fifo/sync_fifo.xci # } 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: # add_files -fileset constrs_1      $path_sdc_prj/red_pitaya.xdc # import_files -force 
+// Tcl Message: INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1' INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: import_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 7062.730 ; gain = 0.000 ; free physical = 2187 ; free virtual = 9803 
+// Tcl Message: # set_property top red_pitaya_top [current_fileset] # update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: update_compile_order: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 7086.746 ; gain = 24.016 ; free physical = 2218 ; free virtual = 9834 
+// Elapsed time: 112 seconds
+dismissDialog("Sourcing Tcl script 'red_pitaya_vivado_project_Z10.tcl'"); // bz (cs)
+// TclEventType: STOP_PROGRESS_DIALOG
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1173 ms. Increasing delay to 3519 ms.
+// [GUI Memory]: 129 MB (+2604kb) [00:02:26]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,496 MB. GUI used memory: 78 MB. Current time: 6/29/26, 5:53:29 PM IST
+// Elapsed time: 107 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+// PAPropertyPanels.initPanels (red_pitaya_top.sv) elapsed time: 0.2s
+// [Engine Memory]: 1,498 MB (+1708kb) [00:04:17]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), pll : red_pitaya_pll (red_pitaya_pll.sv)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1807 ms. Increasing delay to 5421 ms.
+// Elapsed time: 84 seconds
+selectCodeEditor("red_pitaya_top.sv", 74, 135); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 275, 119); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 292, 130); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 1, 145); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("red_pitaya_top.sv", 1, 141); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 302, 236); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 3, 200); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 262, 208); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 3, 164); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,521 MB. GUI used memory: 80 MB. Current time: 6/29/26, 5:55:59 PM IST
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 502, 137); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,550 MB. GUI used memory: 81 MB. Current time: 6/29/26, 5:56:19 PM IST
+// [GUI Memory]: 139 MB (+4273kb) [00:07:03]
+// Elapsed time: 72 seconds
+selectCodeEditor("red_pitaya_top.sv", 113, 308); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("red_pitaya_top.sv", 16, 323); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 63, 53); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 67, 85); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 175, 271); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 527, 252); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,579 MB (+7033kb) [00:09:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,579 MB. GUI used memory: 81 MB. Current time: 6/29/26, 5:58:24 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 154 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_o"); // l (au, cs)
+selectCodeEditor("red_pitaya_top.sv", 202, 344); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 19, 330); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 31 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), mm_core : xil_defaultlib.mm_core]", 8, false); // B (F, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,613 MB. GUI used memory: 81 MB. Current time: 6/29/26, 6:01:09 PM IST
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 28 seconds
+String[] filenames31467 = {"/auto/common/durga/work/proj/hwacc/hw/rtl/mm_axi_slave.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_core.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_ctrl.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_dpram.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_mac.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_reg.v", "/auto/common/durga/work/proj/hwacc/hw/rtl/mm_yram.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 39 seconds
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/auto/common/durga/work/proj/hwacc/hw/rtl/mm_axi_slave.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_core.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_dpram.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_ctrl.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_mac.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_yram.v /auto/common/durga/work/proj/hwacc/hw/rtl/mm_reg.v} 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), mm_core : mm_core (mm_core.v)]", 8); // B (F, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,633 MB. GUI used memory: 83 MB. Current time: 6/29/26, 6:02:19 PM IST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 7344.871 ; gain = 61.027 ; free physical = 2149 ; free virtual = 9781 
+// Elapsed time: 16 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 12289 ms. Increasing delay to 36867 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1097 ms. Decreasing delay to 3097 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1633 ms. Increasing delay to 4899 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 158 MB (+12572kb) [00:17:11]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2877 ms. Increasing delay to 8631 ms.
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 447 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag (cs)
+// Elapsed time: 18 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-448] named port connection 'sys_we' does not exist for instance 'mm_core' of module 'mm_core' [/auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/imports/RedPitaya-FPGA/prj/v0.94/rtl/red_pitaya_top.sv:517]. ]", 5, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/imports/RedPitaya-FPGA/prj/v0.94/rtl/red_pitaya_top.sv;-;;-;16;-;line;-;517;-;;-;16;-;"); // ah (J, cs)
+selectCodeEditor("red_pitaya_top.sv", 66, 158); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cs)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+// Elapsed time: 81 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 83 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun 29 18:12:18 2026] Launched synth_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/synth_1/runme.log [Mon Jun 29 18:12:18 2026] Launched impl_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 7344.871 ; gain = 0.000 ; free physical = 2874 ; free virtual = 9830 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 437ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 303 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,704 MB. GUI used memory: 96 MB. Current time: 6/29/26, 6:17:34 PM IST
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,115 MB. GUI used memory: 96 MB. Current time: 6/29/26, 6:17:38 PM IST
+// [Engine Memory]: 2,115 MB (+478766kb) [00:28:19]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /tools/Xilinx/Vivado/2020.1/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 1.5s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.7s
+// [Engine Memory]: 2,267 MB (+48238kb) [00:28:23]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.5s
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  3717 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 7344.871 ; gain = 0.000 ; free physical = 2831 ; free virtual = 9805 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.45 . Memory (MB): peak = 7710.809 ; gain = 0.000 ; free physical = 2301 ; free virtual = 9275 
+// Tcl Message: Restored from archive | CPU: 0.450000 secs | Memory: 4.039627 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.45 . Memory (MB): peak = 7710.809 ; gain = 0.000 ; free physical = 2301 ; free virtual = 9275 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7710.809 ; gain = 0.000 ; free physical = 2300 ; free virtual = 9274 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 18 instances were transformed.   IOBUF => IOBUF (IBUF, OBUFT): 16 instances   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances  
+// Device view-level: 0.0
+// WARNING: HEventQueue.dispatchEvent() is taking  1039 ms.
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 7891.281 ; gain = 546.410 ; free physical = 2187 ; free virtual = 9161 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// [GUI Memory]: 171 MB (+4616kb) [00:28:26]
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 185 MB (+6213kb) [00:28:27]
+// WARNING: HEventQueue.dispatchEvent() is taking  2415 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2767 ms.
+// 'dZ' command handler elapsed time: 30 seconds
+// [GUI Memory]: 203 MB (+9417kb) [00:28:33]
+// Elapsed time: 30 seconds
+dismissDialog("Open Implemented Design"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 146 MB. Current time: 6/29/26, 6:20:09 PM IST
+// Elapsed time: 227 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 2); // m (l, cs)
+// PAPropertyPanels.initPanels (mm_core (mm_core)) elapsed time: 0.3s
+// Elapsed time: 10 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, false); // bD (J, cs)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, false); // bD (J, cs)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, false); // bD (J, cs)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, false, false, false, false, false, true); // bD (J, cs) - Double Click
+// Elapsed time: 21 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core), mm_axi_slave (mm_axi_slave)]", 8); // bD (J, cs)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core), mm_axi_slave (mm_axi_slave)]", 8); // bD (J, cs)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+// Elapsed time: 42 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aL (aI, cs)
+// Elapsed time: 32 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, true, false, false, false, true, false); // bD (J, cs) - Popup Trigger - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core), mm_axi_slave (mm_axi_slave)]", 8, true); // bD (J, cs) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core), mm_axi_slave (mm_axi_slave)]", 8, true, false, false, false, false, true); // bD (J, cs) - Double Click - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), mm_core : mm_core (mm_core.v), mm_axi_slave : mm_axi_slave (mm_axi_slave.v)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), mm_core : mm_core (mm_core.v), mm_axi_slave : mm_axi_slave (mm_axi_slave.v)]", 9, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 27 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 2); // m (l, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("red_pitaya_top.sv", 212, 309); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,369 MB. GUI used memory: 149 MB. Current time: 6/29/26, 6:24:49 PM IST
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 9 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun 29 18:25:19 2026] Launched synth_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/synth_1/runme.log [Mon Jun 29 18:25:20 2026] Launched impl_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 7960.824 ; gain = 0.000 ; free physical = 2108 ; free virtual = 9070 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4359 ms. Increasing delay to 13077 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1857ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1857 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4768 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3916 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 12676 ms. Increasing delay to 38028 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2271 ms. Increasing delay to 4000 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1299 ms. Decreasing delay to 3299 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3050 ms. Increasing delay to 9150 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 525ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 504ms to process. Increasing delay to 3000 ms.
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 411 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Implementation ;  ;  ;  ; ", 5, "Implementation", 0, true); // O (J, cs) - Node
+selectTab((HResource) null, (HResource) null, "Netlist", 1); // aL (aI, cs)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, true); // bD (J, cs) - Node
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6); // bD (J, cs)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core), mm_axi_slave (mm_axi_slave)]", 8); // bD (J, cs)
+selectCodeEditor("red_pitaya_top.sv", 923, 266); // bP (w, cs)
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cs)
+// bz (cs):  Reloading : addNotify
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd] 
+// Tcl Message: refresh_design 
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 129 MB. Current time: 6/29/26, 6:32:47 PM IST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,374 MB. GUI used memory: 130 MB. Current time: 6/29/26, 6:32:47 PM IST
+// WARNING: HEventQueue.dispatchEvent() is taking  2453 ms.
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,360 MB. GUI used memory: 105 MB. Current time: 6/29/26, 6:32:50 PM IST
+// Xgd.load filename: /tools/Xilinx/Vivado/2020.1/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 0.6s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.7s
+// [Engine Memory]: 2,384 MB (+4109kb) [00:43:33]
+// [Engine Memory]: 2,548 MB (+47116kb) [00:43:34]
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2.7s
+// WARNING: HEventQueue.dispatchEvent() is taking  4231 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.14 . Memory (MB): peak = 7960.824 ; gain = 0.000 ; free physical = 2292 ; free virtual = 9279 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.75 . Memory (MB): peak = 7960.824 ; gain = 0.000 ; free physical = 2163 ; free virtual = 9149 
+// Tcl Message: Restored from archive | CPU: 0.780000 secs | Memory: 8.529999 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.75 . Memory (MB): peak = 7960.824 ; gain = 0.000 ; free physical = 2163 ; free virtual = 9149 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:12 . Memory (MB): peak = 7960.824 ; gain = 0.000 ; free physical = 2060 ; free virtual = 9045 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [Engine Memory]: 2,676 MB (+1015kb) [00:43:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  2704 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [Engine Memory]: 2,931 MB (+126752kb) [00:43:42]
+// WARNING: HEventQueue.dispatchEvent() is taking  2299 ms.
+// Elapsed time: 19 seconds
+dismissDialog("Reloading"); // bz (cs)
+// PAPropertyPanels.initPanels (mm_core (mm_core)) elapsed time: 0.2s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, false); // bD (J, cs)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[red_pitaya_top, mm_core (mm_core)]", 6, true, false, false, false, false, true); // bD (J, cs) - Double Click - Node
+// [GUI Memory]: 220 MB (+6310kb) [00:44:44]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,738 MB. GUI used memory: 155 MB. Current time: 6/29/26, 6:34:59 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,956 MB. GUI used memory: 148 MB. Current time: 6/29/26, 6:43:19 PM IST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 7357 ms. Increasing delay to 22071 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1073 ms. Decreasing delay to 3073 ms.
+// Elapsed time: 818 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun 29 18:46:54 2026] Launched synth_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/synth_1/runme.log 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun 29 18:46:54 2026] Launched impl_1... Run output will be captured here: /auto/common/durga/work/proj/hwacc/hw/syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 8286.914 ; gain = 0.000 ; free physical = 1865 ; free virtual = 8833 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1543 ms. Increasing delay to 4629 ms.
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 891ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4193 ms. Increasing delay to 12579 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1948 ms. Decreasing delay to 3948 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 508ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 436 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 13371 ms. Increasing delay to 40113 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2939 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1892 ms. Decreasing delay to 3892 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5020 ms. Increasing delay to 15060 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 536 ms. Decreasing delay to 2536 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2432 ms. Increasing delay to 7296 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 8864 ms. Increasing delay to 26592 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1122 ms. Decreasing delay to 3122 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2882 ms. Increasing delay to 8646 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10642 ms. Increasing delay to 31926 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 488 ms. Decreasing delay to 2488 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1444 ms. Increasing delay to 4332 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,956 MB. GUI used memory: 147 MB. Current time: 6/29/26, 7:13:19 PM IST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4157 ms. Increasing delay to 12471 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 13098 ms. Increasing delay to 39294 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1063 ms. Decreasing delay to 3063 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3265 ms. Increasing delay to 9795 ms.
