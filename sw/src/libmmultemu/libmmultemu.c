@@ -1,10 +1,11 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
-// File: libmmultemu.c
+// Module: mm_hw_accelerator
+// File:   libmmultemu.c
 // Author: Durga V. Nebhrajani
 // Description:
-//      Libmmultemu for a hardware matrix-vector multiplier that takes
-//      matrix, vector and size input from user
+//      Software emulator library for the Matrix Multiplier Core.
+//      Provides load, run, and output functions that execute matrix-
+//      vector multiplication in software without FPGA hardware.
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani
 //      All rights reserved.

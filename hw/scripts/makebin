@@ -1,3 +1,16 @@
+#---------------------------------------------------------------------------------
+# Module: mm_hw_accelerator
+# File:   makebin
+# Author: Durga V. Nebhrajani
+# Description:
+#         Copies the synthesized bitstream from the Vivado output
+#         directory and converts it to a .bit.bin file suitable for
+#         loading onto the Red Pitaya Zynq FPGA.
+# Copyright:
+#      Copyright (c) 2026 Durga V. Nebhrajani
+#      All rights reserved.
+#---------------------------------------------------------------------------------
+
 \rm -rf red_pitaya_top.bif  red_pitaya_top.bit	red_pitaya_top.bit.bin
 cp ../../syn/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/red_pitaya_top.bit .
 echo -n "all:{ red_pitaya_top.bit }" >  red_pitaya_top.bif

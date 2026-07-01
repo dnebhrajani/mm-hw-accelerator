@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_axi_slave.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         AXI slave bus interface for Matrix Multiplier Core. Decodes system bus
+//         transactions and routes reads/writes to registers, XRAM,
+//         MRAM, and YRAM.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_axi_slave
   (input wire        clk,
    input wire        rst,

@@ -1,3 +1,17 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_yram.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Dual-port result RAM (YRAM) for Matrix Multiplier Core. Stores 40-bit
+//         accumulator outputs split across lower (32-bit) and upper
+//         (8-bit) block RAMs. Port A provides 32-bit AXI read/write
+//         access; port B provides 40-bit MAC write access.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_yram
   (input wire         clk,
 

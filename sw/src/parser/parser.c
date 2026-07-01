@@ -1,9 +1,9 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
-// File: parser.c
+// Module: mm_hw_accelerator
+// File:   parser.c
 // Author: Durga V. Nebhrajani
 // Description:
-//      Parser for data input files. Builds and returns an ast struct
+//      Parser for data input files. Builds and returns an AST struct
 //      populated with N, matrix (M) and vector (X).
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani

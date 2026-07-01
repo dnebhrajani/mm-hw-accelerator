@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   libmmult.h
+// Author: Durga V. Nebhrajani
+// Description:
+//      Header file for the hardware interface library. Defines base
+//      addresses, register offsets, and memory-mapped I/O functions
+//      for the Matrix Multiplier Core on the Red Pitaya FPGA.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 #ifndef LIBMMULT_H
 #define LIBMMULT_H
 

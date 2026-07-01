@@ -1,9 +1,11 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
-// File: mmult.c
+// Module: mm_hw_accelerator
+// File:   mmult.c
 // Author: Durga V. Nebhrajani
 // Description:
-//      Driver file for hwacc module.
+//      Main driver for the matrix multiplier application. Parses
+//      input, loads data into hardware or emulator, runs the
+//      multiplication, and writes the result.
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani
 //      All rights reserved.

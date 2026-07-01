@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_reg.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Control and status register file for Matrix Multiplier Core. Provides
+//         ID, control, status, matrix dimension (N), and cycle count
+//         registers accessible via the AXI slave interface.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_reg
   (input wire        clk,
    input wire        rst,

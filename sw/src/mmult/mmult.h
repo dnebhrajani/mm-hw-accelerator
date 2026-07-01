@@ -1,3 +1,15 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mmult.h
+// Author: Durga V. Nebhrajani
+// Description:
+//      Header file for the main matrix multiplier driver. Includes
+//      parser, hardware library, and emulator library headers.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mult_test.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Simulation test for end-to-end matrix-vector multiplication.
+//         Loads an identity matrix, runs the multiplier, and verifies
+//         Y = M*X.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mult_test;
   
   integer i;

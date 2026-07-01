@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_mac.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Pipelined multiply-accumulate (MAC) unit for Matrix Multiplier Core.
+//         Computes 32 parallel 16-bit multiplications, reduces via a
+//         5-stage adder tree, and accumulates into a 40-bit result.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_mac
   (input wire                clk,
    input wire                rst,

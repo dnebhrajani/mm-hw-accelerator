@@ -1,3 +1,17 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   libmmult.c
+// Author: Durga V. Nebhrajani
+// Description:
+//      Hardware interface library for the Matrix Multiplier Core.
+//      Provides memory-mapped register, XRAM, MRAM, and YRAM access
+//      functions that communicate with the FPGA accelerator via
+//      /dev/mem.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 #include "libmmult.h"
 
 int reg_fd;

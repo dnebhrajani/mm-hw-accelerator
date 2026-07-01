@@ -1,10 +1,9 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
+// Module: mm_hw_accelerator
 // File:   mm_simtop.v
 // Author: Durga V. Nebhrajani
 // Description:
-//         Simulation top level for Ising Machine Core.
-//      
+//         Simulation top level for Matrix Multiplier Core.     
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani
 //      All rights reserved.

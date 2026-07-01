@@ -1,16 +1,16 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
-// File: tokenizer.h
+// Module: mm_hw_accelerator
+// File:   lexer.h
 // Author: Durga V. Nebhrajani
 // Description:
-//      Header file for a character-level scanner/tokenizer.
+//      Header file for the character-level scanner/lexer.
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani
 //      All rights reserved.
 //--------------------------------------------------------------------------------
 
-#ifndef TOKENIZER_H
-#define TOKENIZER_H
+#ifndef LEXER_H
+#define LEXER_H
 
 
 #include <stdlib.h>

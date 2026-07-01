@@ -1,18 +1,18 @@
 //--------------------------------------------------------------------------------
-// Module: hwacc
-// File: tokenizer.c
+// Module: mm_hw_accelerator
+// File:   lexer.c
 // Author: Durga V. Nebhrajani
 // Description:
-//      Implementation file for a character-level scanner/tokenizer.
+//      Implementation file for the character-level scanner/lexer.
 //      Reads from a FILE* one character at a time and produces a
-//      stream of typed tokens. Intended for use by parser.c to tokenize
-//      matrix, vector, and n input files.
+//      stream of typed tokens. Intended for use by parser.c to
+//      tokenize matrix, vector, and N input files.
 // Copyright:
 //      Copyright (c) 2026 Durga V. Nebhrajani
 //      All rights reserved.
 //--------------------------------------------------------------------------------
 
-#include "tokenizer.h"
+#include "lexer.h"
 
 char filename[64] = "";
 

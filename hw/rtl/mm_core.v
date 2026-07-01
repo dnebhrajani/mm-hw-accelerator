@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_core.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Top-level structural module for Matrix Multiplier Core. Instantiates and
+//         interconnects AXI slave, register file, XRAM, MRAM, YRAM,
+//         MAC unit, and control block.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_core
   (input wire         clk,
    input wire         rst,

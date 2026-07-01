@@ -1,3 +1,15 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mem_test.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Simulation test for memory-mapped register, XRAM, MRAM,
+//         and YRAM read/write access via the AXI slave interface.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mem_test;
 
   reg [31:0] rd_data;

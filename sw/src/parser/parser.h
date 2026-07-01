@@ -1,3 +1,15 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   parser.h
+// Author: Durga V. Nebhrajani
+// Description:
+//      Header file for the input file parser. Defines the AST structure
+//      and parser state machine states.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -5,7 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include "tokenizer.h"
+#include "lexer.h"
 
 #define MAXN 256
 

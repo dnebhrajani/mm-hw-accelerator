@@ -1,3 +1,15 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   tst.c
+// Author: Durga V. Nebhrajani
+// Description:
+//      Quick smoke-test for the hardware library. Loads a 10x10
+//      identity matrix, runs the multiplier, and prints Y.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 #include "libmmult.h"
   
 int main(void) {

@@ -1,3 +1,16 @@
+//--------------------------------------------------------------------------------
+// Module: mm_hw_accelerator
+// File:   mm_dpram.v
+// Author: Durga V. Nebhrajani
+// Description:
+//         Parameterized dual-port block RAM for Matrix Multiplier Core. Port A is
+//         16-bit (element-wise access), port B is 512-bit (page-wide
+//         access). Used for both XRAM and MRAM.
+// Copyright:
+//      Copyright (c) 2026 Durga V. Nebhrajani
+//      All rights reserved.
+//--------------------------------------------------------------------------------
+
 module mm_dpram
   #(parameter                        MEM_SZ = 256
    )
