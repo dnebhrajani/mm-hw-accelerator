@@ -63,6 +63,6 @@ extern int gety_hw(int64_t *, int);
 
 extern int *readx_hw(int);
 
-extern volatile uint32_t *map_mem(int, int, int);
+extern volatile uint32_t *map_mem(int, int, int *);
 
 #endif

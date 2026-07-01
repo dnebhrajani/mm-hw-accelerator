@@ -12,6 +12,27 @@
 
 #include "parser.h"
 
+//--------------------------------------------------------------------------------
+// Function: parse
+//
+// Description:
+//      Opens and tokenizes the given input file, then drives a state
+//      machine that recognises 'vars', 'vector', and 'matrix'
+//      declarations. Returns a heap-allocated AST populated with N,
+//      vector X, and matrix M.
+//
+// Parameters:
+//      fname:  Path to the input file to parse.
+//
+// Returns:
+//      Pointer to a heap-allocated ast struct. Caller must free with
+//      free_ast().
+//
+// Error Handling:
+//      Prints a diagnostic to stderr and calls exit(1) on file-open
+//      failure, malloc failure, or any syntax/semantic error.
+//--------------------------------------------------------------------------------
+
 ast *parse(char *fname) {
   token_type toktype;
   char *tokval;
@@ -272,13 +293,26 @@ ast *parse(char *fname) {
   return hwacc_ast;
 
 error:
-  if (ctok) {
-//    free(ctok);
-  }
-//  fclose(fp);
-//  free_ast(hwacc_ast);
+  fclose(fp);
+  free_ast(hwacc_ast);
   exit(1);
 }
+
+//--------------------------------------------------------------------------------
+// Function: check_ast
+//
+// Description:
+//      Validates the populated AST for semantic correctness: N must
+//      be in range [1, MAXN], vector length must equal N, and matrix
+//      length must equal N*N.
+//
+// Parameters:
+//      hwacc_ast:  Pointer to the AST to validate.
+//
+// Returns:
+//      0 on success, 1 on validation failure (with diagnostic printed
+//      to stderr).
+//--------------------------------------------------------------------------------
 
 int check_ast(ast *hwacc_ast) {
   if (hwacc_ast->N <= 0) {
@@ -312,6 +346,20 @@ int check_ast(ast *hwacc_ast) {
   return 0;
 }
 
+//--------------------------------------------------------------------------------
+// Function: print_ast
+//
+// Description:
+//      Prints the contents of the AST (N, vector X, and matrix M)
+//      to stdout for debugging.
+//
+// Parameters:
+//      hwacc_ast:  Pointer to the AST to print.
+//
+// Returns:
+//      None.
+//--------------------------------------------------------------------------------
+
 void print_ast(ast *hwacc_ast) {
 
   printf("Value of N is: %d\n", hwacc_ast->N);
@@ -330,6 +378,20 @@ void print_ast(ast *hwacc_ast) {
     printf("\n");
   }
 }
+
+//--------------------------------------------------------------------------------
+// Function: free_ast
+//
+// Description:
+//      Frees all heap memory associated with the given AST: the X
+//      array, the M array, and the ast struct itself.
+//
+// Parameters:
+//      hwacc_ast:  Pointer to the AST to free. May be NULL.
+//
+// Returns:
+//      None.
+//--------------------------------------------------------------------------------
 
 void free_ast(ast *hwacc_ast) {
   if (!hwacc_ast) {

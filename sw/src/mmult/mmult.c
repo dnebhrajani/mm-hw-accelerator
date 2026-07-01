@@ -15,17 +15,45 @@
 
 bool use_hw = true;
 
+//--------------------------------------------------------------------------------
+// Function: initialize
+//
+// Description:
+//      Maps the four FPGA memory regions (REG, XRAM, MRAM, YRAM)
+//      into the process address space when running on hardware.
+//      No-op when running in emulator mode.
+//
+// Parameters:
+//      None.  Uses the global use_hw flag.
+//
+// Returns:
+//      None.
+//--------------------------------------------------------------------------------
+
 void initialize() {
   if (use_hw) {
-    reg_ba  = map_mem(REG_BA,  REG_SIZE,  reg_fd);
-    xram_ba = map_mem(XRAM_BA, XRAM_SIZE, xram_fd);
-    mram_ba = map_mem(MRAM_BA, MRAM_SIZE, mram_fd);
-    yram_ba = map_mem(YRAM_BA, YRAM_SIZE, yram_fd);
+    reg_ba  = map_mem(REG_BA,  REG_SIZE,  &reg_fd);
+    xram_ba = map_mem(XRAM_BA, XRAM_SIZE, &xram_fd);
+    mram_ba = map_mem(MRAM_BA, MRAM_SIZE, &mram_fd);
+    yram_ba = map_mem(YRAM_BA, YRAM_SIZE, &yram_fd);
   }
   else {
     return;
   }
 }
+
+//--------------------------------------------------------------------------------
+// Function: loadn
+//
+// Description:
+//      Dispatches the matrix dimension N to hardware or emulator.
+//
+// Parameters:
+//      mdata:  Pointer to the parsed AST.
+//
+// Returns:
+//      0 on success, non-zero on failure.
+//--------------------------------------------------------------------------------
 
 int loadn(ast *mdata) {
   if (use_hw) {
@@ -37,6 +65,19 @@ int loadn(ast *mdata) {
 }
 
 
+//--------------------------------------------------------------------------------
+// Function: loadx
+//
+// Description:
+//      Dispatches the input vector X to hardware or emulator.
+//
+// Parameters:
+//      mdata:  Pointer to the parsed AST.
+//
+// Returns:
+//      0 on success, non-zero on failure.
+//--------------------------------------------------------------------------------
+
 int loadx(ast *mdata) {
   if (use_hw) {
     return loadx_hw(mdata);
@@ -46,6 +87,19 @@ int loadx(ast *mdata) {
   }
 }
 
+
+//--------------------------------------------------------------------------------
+// Function: loadm
+//
+// Description:
+//      Dispatches the input matrix M to hardware or emulator.
+//
+// Parameters:
+//      mdata:  Pointer to the parsed AST.
+//
+// Returns:
+//      0 on success, non-zero on failure.
+//--------------------------------------------------------------------------------
 
 int loadm(ast *mdata) {
   if (use_hw) {
@@ -57,6 +111,20 @@ int loadm(ast *mdata) {
 }
 
 
+//--------------------------------------------------------------------------------
+// Function: run
+//
+// Description:
+//      Triggers the matrix-vector multiplication on hardware or
+//      emulator and waits for completion.
+//
+// Parameters:
+//      None.
+//
+// Returns:
+//      0 on success, non-zero on failure.
+//--------------------------------------------------------------------------------
+
 int run(void) {
   if (use_hw) {
     return run_hw();
@@ -67,6 +135,20 @@ int run(void) {
 }
 
 
+//--------------------------------------------------------------------------------
+// Function: gety
+//
+// Description:
+//      Reads the result vector Y from hardware or emulator.
+//
+// Parameters:
+//      Y:  Pointer to the output array to populate.
+//      n:  Number of elements to read.
+//
+// Returns:
+//      0 on success, non-zero on failure.
+//--------------------------------------------------------------------------------
+
 int gety(int64_t *Y, int n) {
   if (use_hw) {
     return gety_hw(Y, n);
@@ -75,6 +157,20 @@ int gety(int64_t *Y, int n) {
     return 0;    
   }
 }
+
+//--------------------------------------------------------------------------------
+// Function: terminate
+//
+// Description:
+//      Unmaps the four FPGA memory regions and closes their file
+//      descriptors when running on hardware. No-op in emulator mode.
+//
+// Parameters:
+//      None.
+//
+// Returns:
+//      None.
+//--------------------------------------------------------------------------------
 
 void terminate() {
   if (use_hw) {
@@ -93,6 +189,22 @@ void terminate() {
   }
 }
 
+
+//--------------------------------------------------------------------------------
+// Function: main
+//
+// Description:
+//      Entry point for the matrix multiplier application. Parses
+//      command-line arguments, opens the output file, drives the
+//      parse → load → run → get → write pipeline, and cleans up.
+//
+// Parameters:
+//      argc:   Argument count (must be >= 3).
+//      argv:   argv[1] = input file, argv[2] = output file.
+//
+// Returns:
+//      0 on success.
+//--------------------------------------------------------------------------------
 
 int main(int argc, char **argv) {
   initialize();
@@ -209,6 +321,7 @@ int main(int argc, char **argv) {
   // Step 5: Write output
   //----------------------------------------------------------------------
   write_output(outfile);
+  fclose(outfile);
   free_ast(mdata);
   terminate();  
   return 0;

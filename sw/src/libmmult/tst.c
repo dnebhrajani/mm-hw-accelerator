@@ -12,6 +12,21 @@
 
 #include "libmmult.h"
   
+//--------------------------------------------------------------------------------
+// Function: main
+//
+// Description:
+//      Constructs a 10-element vector [1..10] and a 10x10 matrix
+//      (2*I), loads them into hardware, runs the multiplier, reads
+//      back Y, and prints the results.
+//
+// Parameters:
+//      None.
+//
+// Returns:
+//      0 on success (implicit).
+//--------------------------------------------------------------------------------
+
 int main(void) {
   int16_t X[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   int16_t M[] = {

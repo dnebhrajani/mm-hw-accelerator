@@ -25,6 +25,21 @@
 #include <stdint.h>
 #include <time.h>
 
+//--------------------------------------------------------------------------------
+// Function: main
+//
+// Description:
+//      Generates a random N-element vector and NxN matrix of signed
+//      16-bit integers and prints them to stdout in the format
+//      expected by the mmult parser (vars/vector/matrix blocks).
+//
+// Parameters:
+//      None.
+//
+// Returns:
+//      0 on success.
+//--------------------------------------------------------------------------------
+
 int main(void) {
   srand(time(NULL));
   int N = 16;

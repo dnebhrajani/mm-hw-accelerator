@@ -209,6 +209,21 @@ void m_multiply(void) {
   }
 }
 
+//--------------------------------------------------------------------------------
+// Function: run_emu
+//
+// Description:
+//      Validates N and executes the matrix-vector multiplication in
+//      software via m_multiply(). Exits with a fatal error if N is
+//      outside the allowed range [1, MAXN].
+//
+// Parameters:
+//      None.  Operates on the global N, M, X, and Y arrays.
+//
+// Returns:
+//      0 on success.
+//--------------------------------------------------------------------------------
+
 int run_emu(void) {
   static const em_error EM_ERR_INVALID_N = {
     "E01",

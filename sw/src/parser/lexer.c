@@ -180,12 +180,6 @@ const char *token_type_str(token_type type) {
 //      scanner_init(&scan, fopen("matrix.txt", "r"));
 //--------------------------------------------------------------------------------
 
-/*
-void scanner_init(scanner *scan, FILE *fp) {
-  scan->fp = fp;
-  scan->curr = fgetc(fp);
-}*/
-
 void scanner_init(scanner *scan, FILE *fp, const char *fname) {
   scan->fp = fp;
   scan->curr = fgetc(fp);
